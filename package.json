@@ -1,0 +1,27 @@
+{
+  "name": "server-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "GNU General Public License v3.0",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "build": "babel index.js --out-file index-compiled.js",
+    "db:migrate": "knex migrate:latest --knexfile=database/knexfile.js",
+    "db:seed": "knex seed:run --knexfile=database/knexfile.js"
+  },
+  "dependencies": {
+    "apollo-server-express": "^1.2.0",
+    "body-parser": "^1.18.2",
+    "casual": "^1.5.17",
+    "express": "^4.16.2",
+    "graphql": "^0.11.7",
+    "graphql-tools": "^2.7.2",
+    "knex": "^0.14.0",
+    "nodemon": "^1.12.1",
+    "objection": "^0.9.0",
+    "sqlite3": "^3.1.13"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
