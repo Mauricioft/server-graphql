@@ -2,9 +2,9 @@ const { Model } = require('objection')
 const path = require('path')
 
 
-class Comentarios extends Model {
+class Profesor extends Model {
   static get tableName() {
-    return 'profesor'
+    return 'profesores'
   }
 
   static get relationMappings() {
@@ -20,3 +20,5 @@ class Comentarios extends Model {
     }
   }
 }
+
+module.exports = Profesor

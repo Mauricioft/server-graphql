@@ -2,7 +2,7 @@ const { Model } = require('objection')
 const path = require('path')
 
 
-class Comentarios extends Model {
+class Comentario extends Model {
   static get tableName() {
     return 'comentarios'
   }
@@ -20,3 +20,5 @@ class Comentarios extends Model {
     }
   }
 }
+
+module.exports = Comentario

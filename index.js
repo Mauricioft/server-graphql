@@ -6,6 +6,8 @@ const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
 const schema = require('./schema');
 const env = require('./config/env');
 
+require('./database/setup')
+
 const app = express();
  
 // bodyParser is needed just for POST.
@@ -14,5 +16,5 @@ app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' })); // if you wa
 // app.get('/', (req, res) => { res.send('Hello World') });
 
 app.listen(env.PORT, () => {
-  console.log('GraphQL Server is now running on http://localhost:${env.PORT}');
+  console.log(`GraphQL Server is now running on http://localhost:${env.PORT}`);
 });
